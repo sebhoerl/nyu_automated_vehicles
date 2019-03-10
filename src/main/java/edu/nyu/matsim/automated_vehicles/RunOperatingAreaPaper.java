@@ -35,6 +35,7 @@ import ch.ethz.matsim.baseline_scenario.config.CommandLine.ConfigurationExceptio
 import ch.ethz.matsim.discrete_mode_choice.modules.ConstraintModule;
 import ch.ethz.matsim.discrete_mode_choice.modules.DiscreteModeChoiceConfigurator;
 import ch.ethz.matsim.discrete_mode_choice.modules.DiscreteModeChoiceModule;
+import ch.ethz.matsim.discrete_mode_choice.modules.ModelModule.ModelType;
 import ch.ethz.matsim.discrete_mode_choice.modules.config.DiscreteModeChoiceConfigGroup;
 import ch.ethz.matsim.discrete_mode_choice.modules.config.LinkAttributeConstraintConfigGroup;
 import edu.nyu.matsim.automated_vehicles.operating_area.OperatingAreaModule;
@@ -90,6 +91,7 @@ public class RunOperatingAreaPaper {
 		dmcConfig.setTourConstraints(
 				Arrays.asList(ConstraintModule.VEHICLE_CONTINUITY, ConstraintModule.FROM_TRIP_BASED));
 		dmcConfig.setTripConstraints(Arrays.asList(ConstraintModule.LINK_ATTRIBUTE));
+		dmcConfig.setModelType(ModelType.Tour);
 
 		// Set up the operating area constraint for the users
 		LinkAttributeConstraintConfigGroup linkAttributeConfig = dmcConfig.getLinkAttributeConstraintConfigGroup();

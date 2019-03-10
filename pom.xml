@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>ch.ethz.matsim</groupId>
 			<artifactId>discrete_mode_choice</artifactId>
-			<version>1.0.2</version>
+			<version>1.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.ethz.matsim</groupId>
